@@ -2,15 +2,14 @@
 
 module.exports = {
     // for changes to the node code
-    nodemon: {
-        dev: {
-            options: {
-                file: 'server/server.js',
-                nodeArgs: ['--debug'],
-                watchedFolders: ['server'],
-                env: {
-                    PORT: '3300'
-                }
+    dev: {
+        script: 'server.js',
+        options: {
+            cwd: 'server',
+            nodeArgs: ['--debug'],
+            watchedFolders: ['server', 'server/controllers', 'server/views'],
+            env: {
+                PORT: '3300'
             }
         }
     }
