@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Heist</title>
+    <link rel="stylesheet" type="text/css" href="css/myapp.css">
+  </head>
+  <body>
+    <div id="header">
+        <h1>Movies</h1>
+        <a href="#">Movie List</a> | <a href="#add">New Movie</a>
+    </div>
+    <br/>
+    <div id="content">
+      {body}
+    </div>
+
+    <script type="text/javascript" src="js/myapp.js"></script>
+  </body>
+</html>
