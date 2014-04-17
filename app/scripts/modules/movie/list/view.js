@@ -45,7 +45,7 @@ define(['app'], function(App) {
         //     }
         // });
 
-        View.Movie = Marionette.ItemView.extend({
+        View.MovieOne = Marionette.ItemView.extend({
             tagName: 'div',
             template: 'movie_list_one',
 
@@ -78,7 +78,7 @@ define(['app'], function(App) {
             }
         });
 
-        var NoMovieView = Marionette.ItemView.extend({
+        View.MovieNone = Marionette.ItemView.extend({
             template: 'movie_none',
             // tagName: 'div',
             className: 'alert'
@@ -88,8 +88,8 @@ define(['app'], function(App) {
             tagName: 'div',
             className: '',
             template: 'movie_list',
-            emptyView: NoMovieView,
-            itemView: View.Movie ,
+            emptyView: View.MovieNone,
+            itemView: View.MovieOne,
             itemViewContainer: '.movie_list',
 
             initialize: function() {

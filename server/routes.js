@@ -5,19 +5,19 @@ var home = require('./controllers/home'),
 
 module.exports.initialize = function(app) {
 
-    app.options('/', function(req, res) {
+    // app.options('/', function(req, res) {
         // At this point, the `allowCrossDomain()` middleware will already have
         // taken care of the CORS stuff, so just return OK.
-        res.send(200);
-    });
+        // res.send(200);
+    // });
 
-    app.get('/api/:api/', function(req, res, next){
+    // app.get('/api/:api/', function(req, res, next){
 
         // for the example url this will print 'mysubdomain'
         // res.send(req.params.thesubdomain);
-        return home.index();
+        // return home.index();
 
-    });
+    // });
 
     app.get('/', home.index);
     app.get('/movies', movies.index);

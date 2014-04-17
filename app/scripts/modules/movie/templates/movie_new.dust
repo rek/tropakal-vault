@@ -1,0 +1,3 @@
+<div class="movie_new">
+    Add movie: <input type="text" id="new_movie" />
+</div>

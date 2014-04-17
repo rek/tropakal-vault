@@ -25,11 +25,11 @@ app.set('port', process.env.PORT || 3300);
 // app.set('view engine', 'js');
 
 // app.use('/', express.static(path.join(__dirname, 'public')));
-app.use(require('express-subdomain-handler')({
-    baseUrl: 'api.localhost',
-    prefix: 'api',
-    logger: true
-}));
+// app.use(require('express-subdomain-handler')({
+    // baseUrl: 'api.localhost',
+    // prefix: 'api',
+    // logger: true
+// }));
 
 var allowedHost = {
     'http://api.localhost:3300': true,
