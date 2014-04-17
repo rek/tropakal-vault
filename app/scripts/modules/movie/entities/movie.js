@@ -3,7 +3,8 @@ define(['app'], function(App) {
     App.module('Entities', function(Entities, App, Backbone, Marionette, $, _) {
         var contextName = 'Entity';
         Entities.Movie = Backbone.Model.extend({
-            urlRoot: 'movie',
+
+            // urlRoot: 'movie',
 
             defaults: {
                 name: '',
@@ -30,7 +31,7 @@ define(['app'], function(App) {
         });
 
         Entities.MovieCollection = Backbone.Collection.extend({
-            url: '/api/movies',
+            url: 'http://api.localhost:3300/movies',
             model: Entities.Movie
         });
 

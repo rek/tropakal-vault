@@ -3,7 +3,7 @@
 module.exports = {
     'test': [
         // 'clean:server',
-        'jshint',
+        'newer:jshint',
 
         'connect:test',
         'mocha_phantomjs',
@@ -11,8 +11,8 @@ module.exports = {
 
     'build': [
         'clean:dist',
-        'dustjs',          // dust -> js
-        'less:production', // less -> css
+        'newer:dustjs',    // dust -> js
+        'newer:less:production', // less -> css
         'useminPrepare',   // concat to prepare for cssmin
         'concurrent:dist', // runs: imagemin, svgmin, htmlmin and cssmin
             // 'concat',
@@ -33,8 +33,8 @@ module.exports = {
         // }
 
         'clean:server',
-        'dustjs',
-        'less:production',
+        'newer:dustjs',
+        'newer:less:production',
         'concurrent:server'
     ]
 };

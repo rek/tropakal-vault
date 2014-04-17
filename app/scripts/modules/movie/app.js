@@ -44,7 +44,7 @@ define(function(require) {
             listMovie : function() {
                 require(['movie_list_controller'], function(ListController) {
                     App.log('List movie: Controller loaded, requesting movie..', MovieAppRouter.name, 2);
-                    executeAction(ListController.listMovie );
+                    executeAction(ListController.listMovie);
                 });
             },
         };
@@ -52,7 +52,7 @@ define(function(require) {
         // also watch for manual events:
         App.on('movie:list', function() {
             App.navigate('/movie');
-            API.listMovie ();
+            API.listMovie();
         });
 
         App.addInitializer(function() {
