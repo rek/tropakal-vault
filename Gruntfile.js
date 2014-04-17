@@ -20,19 +20,6 @@ module.exports = function(grunt) {
             //         }
             //     }
             // },
-            // uglify: {
-            //     options: {
-            //         mangle: {
-            //             except: ['jQuery', 'Backbone']
-            //         },
-            //         banner: banner,
-            //     },
-            //     dist: {
-            //         files: {
-            //             'build/scripts/app.min.js': ['build/scripts/app.js']
-            //         }
-            //     }
-            // },
             mocha: {
                 all: {
                     options: {

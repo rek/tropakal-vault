@@ -5,7 +5,7 @@ module.exports = {
         limit: 4
     },
     server: {
-        tasks: ['nodemon:dev', 'shell:mongo', 'watch'],
+        tasks: ['nodemon:dev', 'shell:mongo', 'connect:dev', 'watch'],
         options: {
             logConcurrentOutput: true
         }

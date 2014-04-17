@@ -5,21 +5,20 @@ var express = require('express'),
     path = require('path'),
     routes = require('./routes'),
     seeder = require('./seeder'),
-    dustjs = require('adaro'),
+    // dustjs = require('adaro'),
     mongoose = require('mongoose'),
     app = express();
 
-app.set('port', process.env.PORT || 3300);
-app.set('views', __dirname + '/views');
+app.set('port', process.env.PORT || 9000);
 
-
+// app.set('views', __dirname + '/views');
 //Sets up Global Variables to be used in all views
 // dust.makeBase({
     // copy: '&copy; 2014 beak labs'
 // });
 
-app.engine('dust', dustjs.dust({}));
-app.set('view engine', 'dust');
+// app.engine('dust', dustjs.dust({}));
+// app.set('view engine', 'dust');
 
 // For rendering precompiled templates:
 // app.engine('js', dustjs.js({ ... ));

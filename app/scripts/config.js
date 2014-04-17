@@ -15,6 +15,14 @@ requirejs.config({
         spin: '../bower_components/spinjs/spin',
         'spin.jquery': '../bower_components/spinjs/jquery.spin',
 
+        'movie_list_view'      : 'modules/movie/list/view',
+        'movie_list_controller': 'modules/movie/list/controller',
+        'movie_entities'       : 'modules/movie/entities/movie',
+
+        'trope_list_view'      : 'modules/trope/list/view',
+        'trope_list_controller': 'modules/trope/list/controller',
+        'trope_entities'       : 'modules/trope/entities/trope',
+
         /**===== yeoman hook =====**/
         /**This above hook is required for Mr.Yeoman, touch not it, nor it's indentation... please. **/
 

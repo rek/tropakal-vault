@@ -56,7 +56,7 @@ define([
         App.on('initialize:after', function() {
             if (Backbone.history) {
                 // note: this is async, so the rest of the init code here will run first
-                require(['modules/APPNAME/app', 'modules/pages/app'], function () {
+                require(['modules/movie/app', 'modules/trope/app'], function () {
                     // Trigger the initial route and enable HTML5 History API support
                     // Backbone.history.start({
                     //     pushState: true,
@@ -67,7 +67,7 @@ define([
 
                     // set a default route
                     if (App.getCurrentRoute() === '') {
-                        App.trigger('MODULE:list');
+                        App.trigger('movie:list');
                     }
                     // App.switchApp('MyApp', {});
                 });

@@ -7,7 +7,7 @@ module.exports = {
         options: {
             cwd: 'server',
             nodeArgs: ['--debug'],
-            watchedFolders: ['server', 'server/controllers', 'server/views'],
+            watchedFolders: ['server'],
             env: {
                 PORT: '3300'
             }

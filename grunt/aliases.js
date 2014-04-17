@@ -1,11 +1,6 @@
-/*global grunt */
 'use strict';
 
 module.exports = {
-    'default': [
-        'watch'
-    ],
-
     'test': [
         // 'clean:server',
         'jshint',
@@ -32,18 +27,14 @@ module.exports = {
         'clean:postBuild'
     ],
 
-    'server': function(target) {
-        if (target === 'dist') {
-            return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
-        }
+    'server:dev': [
+        // if (target === 'dist') {
+            // return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
+        // }
 
-        grunt.task.run([
-            'clean:server',
-            'concurrent:server',
-            'livereload-start',
-            'connect:livereload',
-            'open',
-            'watch'
-        ]);
-    }
+        'clean:server',
+        'dustjs',
+        'less:production',
+        'concurrent:server'
+    ]
 };

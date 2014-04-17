@@ -19,13 +19,13 @@ module.exports = {
         src: '<%= settings.app %>/bower_components/requirejs/require.js',
         dest: '<%= settings.dist %>/bower_components/requirejs/require.js'
     },
-    index: { // remove the livereload script tag
+    index: {
         src: '<%= settings.dist %>/index.html.temp',
         dest: '<%= settings.dist %>/index.html',
-        options: {
-            process: function(content) {
-                return content.replace(/<script>require\(\[\'\/\/localhost:35729\/livereload.js\'\]\);<\/script>/g, '');
-            }
-        }
+        // options: { // remove the livereload script tag
+        //     process: function(content) {
+        //         return content.replace(/<script>require\(\[\'\/\/localhost:35729\/livereload.js\'\]\);<\/script>/g, '');
+        //     }
+        // }
     }
 };
